@@ -1,0 +1,126 @@
+.cartOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: auto;
+}
+
+.overlayBg {
+  position: absolute;
+  left: 0;
+  width: 70%;
+  height: 100%;
+}
+
+.cartContent {
+  width: 30%;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.cartContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.itemDetails {
+  flex: 1;
+}
+
+.itemName {
+  font-weight: bold;
+}
+
+.itemPrice {
+  margin: 0.5rem 0;
+}
+
+.sizes {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.sizeBtn {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.sizeBtn.active {
+  background-color: black;
+  color: white;
+}
+
+.itemControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.qtyBtn {
+  border: 1px solid #000;
+  background: none;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.qty {
+  margin: 0.3rem 0;
+}
+
+.itemImg {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: 0.5rem;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.cartButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.viewBag,
+.checkout {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.checkout {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+}

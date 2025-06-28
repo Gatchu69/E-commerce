@@ -1,0 +1,298 @@
+.paymentPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.steps {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 30px;
+  padding: 20px 0;
+}
+
+.steps span {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.steps strong {
+  color: #343a40;
+  font-weight: 600;
+}
+
+.mainContent {
+  display: flex;
+  gap: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.left {
+  flex: 2;
+  padding: 40px;
+}
+
+.infoBox {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.infoBox div {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.infoBox div:last-child {
+  margin-bottom: 0;
+}
+
+.infoBox strong {
+  color: #343a40;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.paymentForm h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 25px;
+}
+
+.cardBox {
+  background-color: #e8f5e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.cardBox::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 16px;
+}
+
+.cardBox::after {
+  content: "Credit Card";
+  position: absolute;
+  top: 25px;
+  left: 75px;
+  font-weight: 600;
+  color: #28a745;
+  font-size: 16px;
+}
+
+.cardBox label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.cardBox label:first-of-type {
+  margin-top: 40px;
+}
+
+.cardBox input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.cardBox input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+}
+
+.cardBox input.error {
+  border-color: #dc3545;
+}
+
+.errorText {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.row input {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.actions button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.actions button:first-child {
+  background-color: transparent;
+  color: #28a745;
+  text-decoration: underline;
+}
+
+.actions button:first-child:hover {
+  color: #218838;
+}
+
+.payBtn {
+  background-color: #28a745 !important;
+  color: white !important;
+  text-decoration: none !important;
+  min-width: 120px;
+}
+
+.payBtn:hover {
+  background-color: #218838 !important;
+}
+
+/* RIGHT SIDE */
+.right {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-left: 1px solid #dee2e6;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  margin-right: 15px;
+}
+
+.summaryItem > div:nth-child(2) {
+  flex: 1;
+}
+
+.itemName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #343a40;
+  margin: 0 0 5px 0;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: 500;
+  color: #28a745;
+  margin: 0;
+}
+
+.qtyBubble {
+  position: absolute;
+  top: -8px;
+  left: 65px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.totalBox {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.totalRow span:last-child {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.totalRowTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #dee2e6;
+  font-size: 18px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.totalRowTotal strong:last-child {
+  color: #28a745;
+  font-size: 20px;
+}
+
+/* Security icons for inputs */
+.cardBox input[name="number"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23495057' viewBox='0 0 16 16'%3E%3Cpath d='M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}
+
+.cardBox input[name="cvv"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23495057' viewBox='0 0 16 16'%3E%3Cpath d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/%3E%3Cpath d='M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}

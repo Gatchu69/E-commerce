@@ -1,0 +1,86 @@
+.navbar {
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navLink {
+  display: flex;
+  gap: 24px;
+}
+
+.gender {
+  border-color: #16a34a;
+  color: #374151;
+  text-decoration: none;
+  padding-bottom: 4px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navLink a:hover {
+  color: #16a34a;
+  border-bottom: 2px solid #16a34a;
+}
+
+.logoContainer {
+  color: #16a34a;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 41px;
+  height: 41px;
+  display: inline-block;
+  fill: none;
+  stroke: currentColor;
+}
+.currencyContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.optionBox {
+  width: 120px;
+  height: 120px;
+}
+
+.currencySelector {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: #374151;
+  padding-right: 32px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+}
+
+.cartIcon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.cartImg {
+  width: 20px;
+  height: 20px;
+}
+.cartButton {
+  border: none;
+  background-color: transparent;
+}
