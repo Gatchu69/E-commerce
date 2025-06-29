@@ -34,7 +34,23 @@ const PaymentPage = () => {
     if (!cardData.number || cardData.number.length < 12)
       newErrors.number = "Invalid card number";
     if (!cardData.name) newErrors.name = "Cardholder name required";
-    if (!cardData.expiry) newErrors.expiry = "Expiry date required";
+
+    if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(cardData.expiry)) {
+      newErrors.expiry = "Use format MM/YY (e.g., 12/25)";
+    } else {
+      const [inputMonth, inputYear] = cardData.expiry.split("/").map(Number);
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth() + 1; // JavaScript months: 0–11
+      const currentYear = currentDate.getFullYear() % 100; // get last 2 digits
+
+      if (
+        inputYear < currentYear ||
+        (inputYear === currentYear && inputMonth < currentMonth)
+      ) {
+        newErrors.expiry = "Card has expired";
+      }
+    }
+
     if (!cardData.cvv || cardData.cvv.length !== 3)
       newErrors.cvv = "Invalid CVV";
     return newErrors;
@@ -62,7 +78,6 @@ const PaymentPage = () => {
       </div>
 
       <div className={css.mainContent}>
-        {/* LEFT SIDE */}
         <div className={css.left}>
           <div className={css.infoBox}>
             <div>
@@ -151,7 +166,6 @@ const PaymentPage = () => {
           </form>
         </div>
 
-        {/* RIGHT SIDE */}
         <div className={css.right}>
           {cartItems.map((item, i) => (
             <div key={i} className={css.summaryItem}>

@@ -37,7 +37,7 @@ const ShippingInfoPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/shipping", { state: form }); // ✅ Pass form data to Shipping page
+    navigate("/shipping", { state: form });
   };
 
   return (

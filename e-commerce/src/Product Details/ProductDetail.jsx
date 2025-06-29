@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../Cart/CartContext";
 import { CurrencyContext } from "../Currency/CurrencyContext";
-import Products from "../Data/AllProducts"; // 🔁 Your product list
+import Products from "../Data/AllProducts";
 
 import css from "./ProductDetail.module.css";
 
@@ -12,7 +12,7 @@ const ProductDetail = () => {
   const { currency, convertPrice } = useContext(CurrencyContext);
 
   const product = Products.find((p) => p.id === parseInt(productId));
-  const images = [product.imageUrl]; // fallback
+  const images = [product.imageUrl];
   const [selectedImage, setSelectedImage] = useState(product.imageUrl);
   const [selectedSize, setSelectedSize] = useState(null);
   const [error, setError] = useState("");

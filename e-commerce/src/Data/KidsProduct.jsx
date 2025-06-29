@@ -12,7 +12,7 @@ const KidsProduct = [
     price: 150.0,
     imageUrl: kids1,
     description: "Comfortable and breathable duo.",
-    outOfStock: false,
+    outOfStock: true,
   },
   {
     id: 22,
@@ -20,7 +20,7 @@ const KidsProduct = [
     price: 110.0,
     imageUrl: kids2,
     description: "Comfortable and breathable duo",
-    outOfStock: false,
+    outOfStock: true,
   },
   {
     id: 23,

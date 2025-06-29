@@ -30,7 +30,6 @@ const NavBar = () => {
       </div>
 
       <div className={css.currencyContainer}>
-        {/* Currency Selector */}
         <div className="relative">
           <select
             className={css.currencySelector}

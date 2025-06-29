@@ -82,7 +82,7 @@ const CartOverlay = () => {
             className={css.viewBag}
             onClick={() => {
               navigate("/cart");
-              setCartOpen(false); // Optional: close overlay
+              setCartOpen(false);
             }}
           >
             VIEW BAG
@@ -90,8 +90,8 @@ const CartOverlay = () => {
           <button
             className={css.checkout}
             onClick={() => {
-              setCartOpen(false); // Optional: close overlay
-              navigate("/details"); // Go to shipping page
+              setCartOpen(false);
+              navigate("/details");
             }}
           >
             CHECK OUT

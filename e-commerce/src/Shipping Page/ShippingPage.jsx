@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { CartContext } from "../Cart/CartContext";
 import { CurrencyContext } from "../Currency/CurrencyContext";
-import { useLocation } from "react-router-dom";
 import css from "./ShippingPage.module.css";
 
 const ShippingPage = () => {
@@ -31,9 +30,7 @@ const ShippingPage = () => {
       </div>
 
       <div className={css.mainContent}>
-        {/* LEFT SIDE */}
         <div className={css.left}>
-          {/* Contact & Shipping Address */}
           <div className={css.infoBox}>
             <div className={css.contactRow}>
               <strong>Contact</strong>
@@ -48,8 +45,6 @@ const ShippingPage = () => {
               </span>
             </div>
           </div>
-
-          {/* Shipping Methods */}
           <h3>Shipping method</h3>
           <div className={css.shippingOptions}>
             <label
@@ -89,7 +84,6 @@ const ShippingPage = () => {
             </label>
           </div>
 
-          {/* Navigation Buttons */}
           <div className={css.navButtons}>
             <button
               onClick={() => navigate("/details")}
@@ -101,8 +95,8 @@ const ShippingPage = () => {
               onClick={() =>
                 navigate("/payment", {
                   state: {
-                    formData: formData, // Pass the form data
-                    shippingMethod: shippingMethod, // Pass the selected shipping method
+                    formData: formData,
+                    shippingMethod: shippingMethod,
                   },
                 })
               }
@@ -113,7 +107,6 @@ const ShippingPage = () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
         <div className={css.right}>
           {cartItems.map((item, i) => (
             <div key={i} className={css.summaryItem}>
@@ -155,7 +148,7 @@ const ShippingPage = () => {
               <strong>Total</strong>
               <strong>
                 {currency}
-                {(subtotal + shippingCost).toFixed(2)}
+                {(subtotal + convertPrice(shippingCost)).toFixed(2)}
               </strong>
             </div>
           </div>

@@ -17,19 +17,24 @@ function ProductGrid({ title, products }) {
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
-            <Link to={`/product/${product.id}`} className="product-link">
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className={`product-image ${
-                  product.outOfStock ? "product-out-of-stock" : ""
-                }`}
-              />
-
-              {product.outOfStock && (
+            {!product.outOfStock ? (
+              <Link to={`/product/${product.id}`} className="product-link">
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="product-image"
+                />
+              </Link>
+            ) : (
+              <div className="product-image-wrapper">
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="product-image product-out-of-stock"
+                />
                 <span className="out-of-stock-text">OUT OF STOCK</span>
-              )}
-            </Link>
+              </div>
+            )}
 
             <div className="product-info">
               <h2 className="product-name">{product.name}</h2>

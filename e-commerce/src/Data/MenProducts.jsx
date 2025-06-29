@@ -51,7 +51,7 @@ const MenProducts = [
     price: 60.0,
     imageUrl: watch6,
     description: "Metal wristband, Quartz mechanism ",
-    outOfStock: false,
+    outOfStock: true,
   },
 ];
 
